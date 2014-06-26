@@ -14,11 +14,6 @@
 // クラス拡張 ※ カテゴリ名のない記述形式
 @interface SecondViewController (){
     UITableView *tbl_view;
-    NSArray *musician;
-    int list_count;
-    
-    
-    // 06/25 : サウンドリストの変数をセットします
     NSMutableArray          *sectionPlayList;
     NSMutableArray          *sectionSongs;
     NSMutableDictionary     *playListSongs;
@@ -37,17 +32,6 @@
     if (self = [super init]) {
 
     }
-
-    // plistのファイルパスを取得
-    /*
-    NSString* path = [[NSBundle mainBundle] pathForResource:@"list" ofType:@"plist"];
-    musician = [NSArray arrayWithContentsOfFile:path];
-    NSLog(@"%@",musician);
-
-    list_count = musician.count;
-    NSLog(@"%@", musician);
-    */
-    
     return self;
 }
 
@@ -58,29 +42,11 @@
     
     NSLog(@"SecondViewController");
 	
-
-    /*
-    self.view.backgroundColor = [UIColor grayColor];
-    
-    UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(0,0,200,100)];
-    label.center   = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/2);
-    label.text     = @"Second";
-    label.font     = [UIFont fontWithName:@"Optima" size:24.0f];
-    label.textAlignment = NSTextAlignmentCenter;
-    //label.backgroundColor = [UIColor greenColor];
-
-    [self.view addSubview:label];
-    */
-    
     // table view
     tbl_view = [[UITableView alloc] initWithFrame:[self.view bounds]];
     tbl_view.delegate = self;
     tbl_view.dataSource = self;
     tbl_view.rowHeight  = 80;//セルのサイズ設定します 06/25
-    
-    /* セルの色設定 */
-    //tbl_view.backgroundColor = [UIColor colorWithRed:1.0 green:0.5 blue:0.5 alpha:1.0];
-
     [self.view addSubview:tbl_view];
     
     
@@ -155,13 +121,6 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    /*
-    cell.textLabel.text = [NSString stringWithFormat:@"%@",  [[musician objectAtIndex:indexPath.row] objectForKey:@"name"]];
-    
-    // ここでも色設定必要
-    cell.backgroundColor = [UIColor colorWithRed:1.0 green:0.5 blue:0.5 alpha:1.0];
-    
-    */
     
     //セルにデータの割り当て
     // 楽曲名
@@ -177,24 +136,7 @@
 
 // セルが選択された場合の処理
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    /* replcae
-    [tableView deselectRowAtIndexPath:indexPath animated:YES]; // 選択状態の解除をします。
-    
-    NSLog(@"selected : %d", indexPath.row);
 
-    // indexの値を元にplistのディクショナリより情報を取得する
-    NSString *name = [[musician objectAtIndex:indexPath.row] objectForKey:@"name"];
-    NSString *info = [[musician objectAtIndex:indexPath.row] objectForKey:@"info"];
-    
-    // アラートウィンドウを表示する
-    UIAlertView *alert = [[UIAlertView alloc]
-                          initWithTitle:name message:info
-                          delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-    [alert show];
-    */
-    
-    
     //選択された曲を検索条件に指定
     NSNumber *persistentId = [[[playListSongs objectForKey:[sectionPlayList objectAtIndex:indexPath.section]]objectAtIndex:indexPath.row]objectAtIndex:0];
 
