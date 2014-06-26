@@ -7,14 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-// mediaplayerをインクルードします
 #import <MediaPlayer/MediaPlayer.h>
 
 @interface FirstViewController : UIViewController
-
-
-// 06/25: 楽曲情報の値を受け取る assign/strongは省略します
+// 06/25: 楽曲情報の値を受け取る
 @property (nonatomic) NSNumber *persistentId;
 @property (nonatomic) NSString *singer_name;
 @property (nonatomic) NSString *song_name;
