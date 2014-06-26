@@ -9,12 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-{
-    // [1]
-    UITabBarController *tabBarController;
-}
 
-@property (strong, nonatomic) UIWindow *window;
-@property (nonatomic, retain) UITabBarController *tabBarController;
+@property (nonatomic) UIWindow *window;
 
 @end

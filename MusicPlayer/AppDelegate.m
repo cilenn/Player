@@ -12,9 +12,16 @@
 
 
 
+@interface AppDelegate()
+{
+    UITabBarController *tabBarController;
+}
+@end
+
+
+
 @implementation AppDelegate
 @synthesize window;
-@synthesize tabBarController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -24,15 +31,8 @@
     FirstViewController *firstViewController = FirstViewController.new; //[[FirstViewController alloc] init];
     SecondViewController *secondViewController = SecondViewController.new; //[[SecondViewController alloc] init];
     
-    
-    
-    
     //tabBarControllerで管理するViewControllerを指定
-    //self.tabBarController = [[UITabBarController alloc] initWithNibName:nil bundle:nil];
-    self.tabBarController = UITabBarController.new;
-    
-    // 06/25 : UINavigationControllerに変更します。
-    //tabBarController.viewControllers = [NSArray arrayWithObjects:firstViewController, secondViewController, nil];
+    tabBarController = UITabBarController.new;
     tabBarController.viewControllers =
     [NSArray arrayWithObjects:
      [[UINavigationController alloc] initWithRootViewController:firstViewController],
@@ -49,10 +49,7 @@
     //tabBarControllerをwindowのrootViewControllerに指定します。
     self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
-    
-    
-    
-    
+
     return YES;
 }
 							
