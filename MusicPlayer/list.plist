@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Black Sabbath</string>
+		<key>info</key>
+		<string>イギリスのヘヴィメタルバンド。1969年にバーミンガムで結成され、幾度ものメンバーチェンジを経ながら40年近くに渡って活動した。現在でも多くのハードロック・ヘヴィメタルファンはもちろんヘヴィロックやグランジなどの界隈からも根強い人気を誇っている。</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cindi Lauper</string>
+		<key>info</key>
+		<string>アメリカ合衆国の歌手・女優。グラミー賞、エミー賞、トニー賞の受賞経験がある。</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>David Bowie</string>
+		<key>info</key>
+		<string>イギリスを代表するマルチ・ミュージシャンであり、俳優としても長いキャリアを持つ。本国イギリスではビートルズ、ローリング・ストーンズ、クイーンらと並んで、20世紀のイギリスを代表するロック・スターの一人である。2000年、雑誌『NME』がミュージシャンを対象に行ったアンケートでは、「20世紀で最も影響力のあるアーティスト」に選ばれた。</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Everything But The GIrl</string>
+		<key>info</key>
+		<string>イギリスの2人組音楽バンドである。ネオ・アコースティックの代表的なバンドとして知られる。デビュー当時はアコースティックを基調としたシンプルなサウンドであったが、キャリア中期からエレクトリックサウンドを大々的に取り入れ、クラブシーンでも知られるようになる。</string>
+	</dict>
+</array>
+</plist>
